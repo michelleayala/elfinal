@@ -1,0 +1,199 @@
+/* welcome phase */
+@import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|");
+
+/* Configuration */
+* {
+  box-sizing: border-box;
+}
+section {
+  overflow-x: hidden;
+}
+
+/* header */
+header a {
+  font-family: "Rubik", cursive;
+  font-size: 0.9em;
+  color: whitesmoke;
+}
+header .nav-item:last-child {
+  padding-right: 10.5em;
+}
+header .nav-item {
+  padding: 0.9em;
+}
+header .navbar-brand {
+  padding-left: 8rem;
+}
+header .nav-link:hover {
+  color: black;
+}
+header .row .col-md-7 {
+  padding: 22vmin 1vmin;
+  padding-bottom: 35vmin;
+}
+header .row .col-md-5 {
+  padding: 4.2vmin 1vmin;
+}
+header .row .col-md-5 img {
+  width: 100%;
+  margin-top: 95px;
+}
+header {
+  background: #ff512f;
+  background: linear-gradient(to bottom, #dd2476, #27021d);
+}
+header .container .col-md-7 h1 {
+  font-size: 8.5vmin;
+  font-weight: bold;
+  padding: 0.1em 0em;
+}
+header .container .col-md-7 p {
+  padding: 1vmin 5vmin;
+}
+.primary-btn {
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+/*  Section 1-2  */
+.cover {
+  width: 100%;
+  height: 25vmin;
+  position: relative;
+}
+.cover .content {
+  width: 100%;
+  height: 100%;
+  padding-top: 8vmin;
+  padding-bottom: 8vmin;
+}
+.cover .content > h1 {
+  font-family: "lobster", cursive;
+  font-size: 6vmin;
+  color:  #212529;
+}
+.cover .content > p {
+  color: #2e2c2caf;
+  font-size: 3vmin;
+  padding-bottom: 8vmin;
+}
+.section-1 .cards .card {
+  width: 22rem;
+  margin: 3vmin 3vmin;
+}
+.team{
+  padding-top: 80px;
+  padding-bottom: 200px;
+}
+.team > h1 {
+  font-size: 6vmin;
+  padding-top: 18vmin;
+  padding-bottom: 0.1em;
+  font-family: "lobster", cursive;
+}
+.team > p {
+  color: #2e2c2caf;
+  font-size: 3vmin;
+  padding-bottom: 10vmin;
+}
+.cards .title {
+  background: rgba(41, 219, 145, 0.199);
+  padding: 1.4em 2.5em;
+  font-size: 2vmin;
+}
+.card .card-text {
+  padding: 2.5rem 3rem;
+  color: #2e2c2caf;
+  font-size: 1.1rem;
+}
+.card-body .pricing > h1 {
+  font-size: 10vmin;
+  padding: 1em 0.5em;
+}
+
+/* footer */
+.footer{
+  text-align: center;
+  background: #2A363B;
+}
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    gap:1rem;
+}
+.footer .links a{
+    padding:.7rem;
+    color: whitesmoke;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+.footer .links a:hover{
+  color:rgb(62, 203, 177);
+}
+.footer .credit{
+    font-size: 1.5em;
+    color: whitesmoke;
+    font-weight: lighter;
+}
+.footer .credit span{
+    color:rgb(62, 203, 177);
+}
+.inputBox{
+    width:40%;
+    display: grid;
+    padding: auto;
+}
+
+/* home media */
+@media (max-width: 768px) {
+    header .navbar-brand {
+      padding-left: 1rem;
+    }
+    .section-1 .row .col-md-6 .panel {
+      position: initial;
+      width: initial;
+      height: initial;
+    }
+    .section-2 .cover {
+      background-position: -25vmin -10vmin;
+    }
+    .numbers .rect {
+      width: 10rem;
+      height: 8rem;
+    }
+    .numbers .rect h1 {
+      font-size: 2rem;
+    }
+  
+    .section-3 {
+      height: inherit;
+      padding: 10vmin !important;
+    }
+    .section-3 .row h1 {
+      padding: 6vmin 4vmin;
+    }
+    .section-3 .platform .col-md-6 {
+      text-align: center !important;
+    }
+    .section-3 .desktop i {
+      font-size: 8vmin;
+    }
+    .section-4 .carousel-item {
+      padding-left: 0.6rem;
+    }
+    footer .row .col-md-2 {
+      margin-top: 8vmin;
+    }
+}
+@media (max-width: 375px) {
+    .section-4 .card {
+      width: 18em;
+    }
+}
+@media (max-width: 320px) {
+    .section-4 .carousel-inner {
+      margin-left: -4vmin;
+    }
+}
