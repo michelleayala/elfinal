@@ -1,0 +1,88 @@
+/* politicas phase */
+@import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|");
+
+
+/*  Section  */
+.cover {
+  width: 100%;
+  height: 25vmin;
+  position: relative;
+}
+.cover .content {
+  width: 100%;
+  height: 100%;
+  padding-top: 5vmin;
+  padding-bottom: 5vmin;
+}
+.cover .content > h1 {
+  font-family: "lobster", cursive;
+  font-size: 6vmin;
+  color: black;
+}
+.cover .content > p {
+  text-align: justify;
+  color: #2e2c2caf;
+  font-size: 2vmin;
+  padding-top: 20px;
+  margin-left: 12em;
+  margin-right: 12em;
+  padding-bottom: 20px;
+}
+.cover .content > h2 {
+  color: black;
+  text-align: center;
+  padding-left: 20px;
+}
+
+
+/* home media */
+@media (max-width: 768px) {
+    header .navbar-brand {
+      padding-left: 1rem;
+    }
+    .section-1 .row .col-md-6 .panel {
+      position: initial;
+      width: initial;
+      height: initial;
+    }
+    .section-2 .cover {
+      background-position: -25vmin -10vmin;
+    }
+    .numbers .rect {
+      width: 10rem;
+      height: 8rem;
+    }
+    .numbers .rect h1 {
+      font-size: 2rem;
+    }
+  
+    .section-3 {
+      height: inherit;
+      padding: 10vmin !important;
+    }
+    .section-3 .row h1 {
+      padding: 6vmin 4vmin;
+    }
+    .section-3 .platform .col-md-6 {
+      text-align: center !important;
+    }
+    .section-3 .desktop i {
+      font-size: 8vmin;
+    }
+    .section-4 .carousel-item {
+      padding-left: 0.6rem;
+    }
+    footer .row .col-md-2 {
+      margin-top: 8vmin;
+    }
+}
+@media (max-width: 375px) {
+    .section-4 .card {
+      width: 18em;
+    }
+}
+@media (max-width: 320px) {
+    .section-4 .carousel-inner {
+      margin-left: -4vmin;
+    }
+}

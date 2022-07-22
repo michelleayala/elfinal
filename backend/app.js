@@ -1,10 +1,8 @@
-'use strict'
-
 var express = require('express')
 var bodyparser = require('body-parser');
 var config = require('./config.js').config
 global.app = express();
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 //cargar archivo de rutas
 //var user_route = require('./routes/usuario');
@@ -28,17 +26,7 @@ app.listen(config.puerto,function(){
     console.log('servidor funcionando por el puerto' + config.puerto)
 })
 
-//cors
-/*app.use((req,res,next)=>{
-    res.header('Access-Control-Allow-Origin','*'); 
-    res.header('Access-Control-Allow-Headers','Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Access-Control-Allow-Request-Method');
-    res.header('Access-Control-Allow-Methods','GET, PUT, POST, DELETE, OPTIONS');
-    res.header('Allow','GET, PUT, POST, DELETE, OPTIONS');
-    next();
-});*/
-
-//reescribir rutas
-//app.use('/api',user_route);
+require('./rutas.js')
  
 //exportar modulo
 module.exports = app;

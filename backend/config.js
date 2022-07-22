@@ -1,7 +1,7 @@
 var config ={}
 
-config.puerto = 4201
+config.puerto = 3000
 config.db = "azumi"
-config.secret = ""
+config.passwordbd = ""
 
 module.exports.config = config
