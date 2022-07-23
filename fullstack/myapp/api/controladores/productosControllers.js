@@ -12,7 +12,7 @@ productosController.Guardar = function(request,response){
         vrdescuento:request.body.vrdescuento,
         nuevo:request.body.nuevo,
         destacado:request.body.destacado,
-        mas_vendidos:request.body.mas_vendidos,
+        mas_vendido:request.body.mas_vendido,
     }
     if (post.codigo == '' || post.codigo == undefined || post.codigo == null ){
         response.json({state:false,mensaje:'el campo del codigo es obligatorio'})
@@ -36,7 +36,12 @@ productosController.Guardar = function(request,response){
     } 
 
     productosModel.Guardar(post,function(respuesta){
-        response.json(respuesta)
+        if(respuesta.state == true){
+            response.json({state:true,mensaje:'Su Producto ha sido Creado'})
+        }
+        else{
+            response.json({state:true,mensaje:'Se Presento un error al Crear el Producto', info:respuesta.info})
+        }
     })
 }
 
@@ -59,7 +64,6 @@ productosController.Actualizar = function(request,response){
         vrdescuento:request.body.vrdescuento,
         nuevo:request.body.nuevo,
         destacado:request.body.destacado,
-        mas_vendidos:request.body.mas_vendidos,
     }
     
     if (post.id == '' || post.id == undefined || post.id == null ){
@@ -95,16 +99,17 @@ productosController.Actualizar = function(request,response){
         return false
     } 
     if (post.destacado == '' || post.destacado == undefined || post.destacado == null ){
-        response.json({state:false,mensaje:'el campo de la nuevo es obligatorio'})
-        return false
-    } 
-    if (post.mas_vendidos == '' || post.mas_vendidos == undefined || post.mas_vendidos == null ){
-        response.json({state:false,mensaje:'el campo del mas_vendidos es obligatorio'})
+        response.json({state:false,mensaje:'el campo de la destacado es obligatorio'})
         return false
     } 
 
     productosModel.Actualizar(post,function(respuesta){
-        response.json(respuesta)
+        if(respuesta.state == false){
+            response.json({state:false,mensaje:'No se pudo Actualizar este Producto'})
+        }
+        else {
+            response.json({state:true,mensaje:'Se Actualizo Correctamente'})
+        }
     })
 }
 
@@ -127,7 +132,12 @@ productosController.Eliminar = function(request,response){
         return false
     } 
     productosModel.Eliminar(post,function(respuesta){
-        response.json(respuesta)
+        if(respuesta.state == false){
+            response.json({state:false,mensaje:'No se pudo Eliminar este Producto'})
+        }
+        else {
+            response.json({state:true,mensaje:'Se Elimino Correctamente'})
+        }
     })
 }
 module.exports.productosController = productosController

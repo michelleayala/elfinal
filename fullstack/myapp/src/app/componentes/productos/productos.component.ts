@@ -33,10 +33,23 @@ export class ProductosComponent implements OnInit {
     return styleClass;
   }
   
- 
-  constructor() { }
+  constructor( ) { }
 
   ngOnInit(): void {
   }
+  misdatos:any[] =[];
   
+  /*CargarTodas(){
+    var post = {
+      host:this.peticion.urlLocal,
+      path:'/productos/CargarTodas',
+      payload:{
+      }
+    }
+
+    this.peticion.Post(post.host + post.path,post.payload).then((res:any) => {
+      console.log(res)
+    })
+  }
+  */
 }

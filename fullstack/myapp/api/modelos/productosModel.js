@@ -11,7 +11,7 @@ var productosSchema = new Schema({
     vrdescuento:String,
     nuevo:String,
     destacado:String,
-    mas_vendidos:String
+    mas_vendido:String
 })
 
 const MyModel = mongoose.model('productos',productosSchema)
@@ -29,17 +29,17 @@ productosModel.Guardar = function(post,callback){
     instancia.destacado =  post.destacado;
     instancia.mas_vendido =  post.mas_vendido;
 
-    instancia.save((error,cread) =>{
+    instancia.save((error,creado) =>{
         if(error){
             return callback({state:false,info:error})
         }else{
-            return callback({state:true,info:creado})
+            return callback({state:true,info:creadon})
         }
     })
 }
 productosModel.CargarTodas = function(post,callback){
     
-    MyModel.find({},{codigo:1,nombre:1,precio:1,cantidad:1,vrdescuento:1,nuevo:1,descatado:1,mas_vendido:1,_id:1},(error,documetos) => {
+    MyModel.find({},{codigo:1,nombre:1,precio:1,cantidad:1,vrdescuento:1,nuevo:1,descatado:1,mas_vendido:1,_id:1},(error,documentos) => {
         if(error){
             return callback({state:false,info:error})
         }

@@ -1,4 +1,30 @@
 <app-nav (onTogglenav)="onTogglenav($event)"></app-nav>
 <div class="productos" [ngClass]="getProductosClass()">
-    <h1>productos</h1>
+    <h1>Productos</h1>
+    <div class="container">
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Codigo</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Valor descuento</th>
+                        <th scope="col">Nuevo</th>
+                        <th scope="col">Destacado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>           
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
