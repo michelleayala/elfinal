@@ -1,5 +1,37 @@
 <app-nav (onTogglenav)="onTogglenav($event)"></app-nav>
 <div class="panel" [ngClass]="getPanelClass()">
-    <h1>hola</h1>
+    <div class="page-wrapper">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Bienvenido administrador</h2>
+                    <h5>
+                        <img src="/assets/logo.png" alt="">
+                        <p>Utiliza este icono para desplegar o contraer la barra de navegación, esto te ayudará a tener una vista completa con toda las pestañas disponibles o te dará una vista más limpia de tu pantalla si así lo deseas.</p>                    </h5>
+                    <br>
+                    <h5>
+                        <i class="fas fa-box-open close-icon"></i>
+                        <p>Utiliza este icono para desplegar la pestaña de Productos, dentro de esta pestaña podrás encontrar todo lo relacionado con la administración de tus productos.</p>
+                    </h5>
+                    <br>
+                    <h5>
+                        <i class="fas fa-boxes close-icon"></i>
+                        <p>Utiliza este icono para desplegar la pestaña de Categorias, dentro de esta pestaña podrás encontrar los productos que tienes en cada categoría.</p>                    </h5>
+                    <br>
+                    <h5>
+                        <i class="fas fa-circle-user close-icon"></i>
+                        <p>Utiliza este icono para desplegar la pestaña de usuarios, dentro de esta pestaña podrás ver y crear usuarios los cuales tendrán acceso a este panel administrativo, ten en cuenta de que ellos podrán editar la información de tus productos, pero no podrán crear nuevos usuarios.</p>                    </h5>
+                    <br>
+                    <h5>
+                        <i class="fas fa-cog close-icon"></i>
+                        <p>Utiliza este icono para desplegar la pestaña de Configuracion, dentro de esta pestaña podrás encontrar todo lo relacionado con la configuración de colores e imágenes promocionales de tu tienda.</p>                    </h5>
+                    <br>
+                    <h5>
+                        <i class="fas fa-times close-icon"></i>
+                        <p>Utiliza este icono solo si quieres cerrar sesion en el panel administrativo, ya que este té redirecciona a la página de tu tienda.</p>                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 

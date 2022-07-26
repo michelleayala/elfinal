@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './componentes/home/home.component';
@@ -15,6 +15,7 @@ import { CategoriasComponent } from './componentes/categorias/categorias.compone
 import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 import { ConfiguracionComponent } from './componentes/configuracion/configuracion.component';
 import { CerrarComponent } from './componentes/cerrar/cerrar.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -35,7 +36,9 @@ import { CerrarComponent } from './componentes/cerrar/cerrar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

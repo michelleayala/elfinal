@@ -11,6 +11,7 @@ interface NavToggle{
   styleUrls: ['./configuracion.component.css']
 })
 export class ConfiguracionComponent implements OnInit {
+  
   isNavCollapsed = false;
   screenWidth = 0;
 

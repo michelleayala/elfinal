@@ -33,7 +33,7 @@ productosModel.Guardar = function(post,callback){
         if(error){
             return callback({state:false,info:error})
         }else{
-            return callback({state:true,info:creadon})
+            return callback({state:true,info:creado})
         }
     })
 }
@@ -44,7 +44,7 @@ productosModel.CargarTodas = function(post,callback){
             return callback({state:false,info:error})
         }
         else{
-            return callback({state:true,info:documentos})
+            return callback({state:true,documentos})
         }     
     })
 }

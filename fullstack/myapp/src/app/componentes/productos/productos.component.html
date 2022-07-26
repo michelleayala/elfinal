@@ -1,6 +1,7 @@
 <app-nav (onTogglenav)="onTogglenav($event)"></app-nav>
 <div class="productos" [ngClass]="getProductosClass()">
     <h1>Productos</h1>
+    <button type="button" class="btn btn-secondary" (click)="Nuevo()">Crear Nuevo</button>
     <div class="container">
         <div class="row">
             <table class="table table-striped">
@@ -17,14 +18,81 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>           
+                    <tr *ngFor="let item of misdatos">
+                        <th scope="row">{{item._id}}</th>
+                        <td>{{item.codigo}}</td>
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.precio}}</td>
+                        <td>{{item.cantidad}}</td>
+                        <td>{{item.vrdescuento}}</td>
+                        <td>{{item.nuevo}}</td>
+                        <td>{{item.destacado}}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalproductos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Crear Producto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label>codigo</label>
+                            <input type="text" class="form-control" id="codigo" [(ngModel)]="codigo" >
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label>Nombre</label>
+                            <input type="text" class="form-control" id="nombre" [(ngModel)]="nombre">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Descripcion</label>
+                        <textarea class="form-control" id="descripcion" [(ngModel)]="descripcion" rows="3"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Precio</label>
+                            <input type="text" class="form-control" id="precio" [(ngModel)]="precio">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Descuento</label>
+                            <input type="text" class="form-control" id="descuento" [(ngModel)]="vrdescuento">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label>Nuevo</label>
+                            <select id="nuevo" [(ngModel)]="nuevo" class="form-control">
+                                <option selected>Seleccione</option>
+                                <option>Si</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Destacado</label>
+                            <select id="destacado" [(ngModel)]="destacado" class="form-control">
+                                <option selected>Seleccione</option>
+                                <option>Si</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn--radius-2 btn--blue" (click)="Guardar()">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>

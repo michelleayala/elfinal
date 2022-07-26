@@ -4,15 +4,31 @@
     margin-left: 5rem;
     z-index: 0;
     position: relative;
-    top:0;
+    top: 0;
     background: #f4f7f4;
     padding: 3rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-.productos-trimmed{
+.productos-trimmed {
     width: calc(100% - 17rem);
     margin-left: 17rem;
 }
-.productos-md-screen{
+.productos-md-screen {
     width: calc(100% - 5rem);
     margin-left: 5rem;
+}
+.modal-content{
+    background: whitesmoke;
+}
+.modal-footer .btn {
+    background: salmon;
+    color: #ffff;
+    border-color: transparent;
+}
+.modal-footer .btn:hover {
+    background: rgb(62, 203, 177);
+    color: #ffff;
+    border-color: transparent;
 }
