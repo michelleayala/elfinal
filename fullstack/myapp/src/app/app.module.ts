@@ -16,6 +16,7 @@ import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 import { ConfiguracionComponent } from './componentes/configuracion/configuracion.component';
 import { CerrarComponent } from './componentes/cerrar/cerrar.component';
 import { FormsModule } from '@angular/forms';
+import { MensajesComponent } from './componentes/mensajes/mensajes.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { FormsModule } from '@angular/forms';
     UsuariosComponent,
     ConfiguracionComponent,
     CerrarComponent,
+    MensajesComponent,
   ],
   imports: [
     BrowserModule,

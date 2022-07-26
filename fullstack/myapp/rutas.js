@@ -5,18 +5,21 @@ app.post('/usuarios/registro', function(request,response){
 
 })
 
-app.post('/productos/Guardar',function(request,respose){
-    productos.Guardar(request,respose)
+app.post('/productos/Guardar',function(request,response){
+    productos.Guardar(request,response)
 })
 
-app.post('/productos/CargarTodas',function(request,respose){
-    productos.CargarTodas(request,respose)
+app.post('/productos/CargarTodas',function(request,response){
+    productos.CargarTodas(request,response)
+})
+app.post('/productos/CargarId',function(request,response){
+    productos.CargarId(request,response)
 })
 
-app.post('/productos/Actualizar',function(request,respose){
-    productos.Actualizar(request,respose)
+app.post('/productos/Actualizar',function(request,response){
+    productos.Actualizar(request,response)
 })
 
-app.post('/productos/Eliminar',function(request,respose){
-    productos.Eliminar(request,respose)
+app.post('/productos/Eliminar',function(request,response){
+    productos.Eliminar(request,response)
 })

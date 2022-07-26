@@ -52,7 +52,20 @@ productosController.CargarTodas = function(request,response){
         response.json(respuesta)
     })
 }
+productosController.CargarId = function(request,response){
+    var post = {
+        id:request.body.id
+    }
 
+    if (post.id == '' || post.id == undefined || post.id == null ){
+        response.json({state:false,mensaje:'el campo del id es obligatorio'})
+        return false
+    } 
+
+    productosModel.CargarId(post,function(respuesta){
+        response.json(respuesta)
+    })
+}
 productosController.Actualizar = function(request,response){
     var post ={
         id:request.body.id,

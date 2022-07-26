@@ -39,7 +39,18 @@ productosModel.Guardar = function(post,callback){
 }
 productosModel.CargarTodas = function(post,callback){
     
-    MyModel.find({},{codigo:1,nombre:1,precio:1,cantidad:1,vrdescuento:1,nuevo:1,descatado:1,mas_vendido:1,_id:1},(error,documentos) => {
+    MyModel.find({},{codigo:1,nombre:1,descripcion:1,precio:1,cantidad:1,vrdescuento:1,nuevo:1,destacado:1,mas_vendido:1,_id:1},(error,documentos) => {
+        if(error){
+            return callback({state:false,info:error})
+        }
+        else{
+            return callback({state:true,documentos})
+        }     
+    })
+}
+productosModel.CargarId = function(post,callback){
+    
+    MyModel.find({_id:post.id},{codigo:1,nombre:1,precio:1,cantidad:1,vrdescuento:1,nuevo:1,destacado:1,mas_vendido:1,_id:1},(error,documentos) => {
         if(error){
             return callback({state:false,info:error})
         }
