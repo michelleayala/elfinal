@@ -102,8 +102,6 @@ export class ProductosComponent implements OnInit {
     })
   }
 
- 
-
   Eliminar(myid:string){
     var post = {
       host:this.peticion.urlLocal,
@@ -203,5 +201,10 @@ export class ProductosComponent implements OnInit {
       }
       
     })
+  }
+
+  item:any= {
+    path: '/subirImagen',
+    destino:'http://localhost:3000'
   }
 }
