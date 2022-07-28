@@ -17,6 +17,7 @@ import { ConfiguracionComponent } from './componentes/configuracion/configuracio
 import { CerrarComponent } from './componentes/cerrar/cerrar.component';
 import { FormsModule } from '@angular/forms';
 import { MensajesComponent } from './componentes/mensajes/mensajes.component';
+import { SubirarchivosComponent } from './componentes/subirarchivos/subirarchivos.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { MensajesComponent } from './componentes/mensajes/mensajes.component';
     ConfiguracionComponent,
     CerrarComponent,
     MensajesComponent,
+    SubirarchivosComponent,
   ],
   imports: [
     BrowserModule,

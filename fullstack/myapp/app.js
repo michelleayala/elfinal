@@ -3,6 +3,8 @@ var bodyparser = require('body-parser');
 var config = require('./config.js').config
 global.app = express();
 const mongoose = require('mongoose');
+global.path = require('path')
+global.appRoot = path.resolve(__dirname)
 
 
 //cargar archivo de rutas
@@ -25,6 +27,7 @@ app.use(bodyparser.urlencoded({extended:true})); //support encoded bodies
 
 
 app.use('/',express.static(__dirname + '/dist/myapp'))
+app.use('/imagenes',express.static(__dirname + '/imagenes')) 
 
 
 app.listen(config.puerto,function(){

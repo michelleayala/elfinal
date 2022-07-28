@@ -1,0 +1,11 @@
+<div *ngIf= "archivoseleccionado" class="">
+    <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" attr.aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100" [ngStyle]= "{ width: progress + '%'}">
+    {{progress}}%
+    </div>
+</div>
+
+<input type="file" class="btn btn-light" (change)= "selectFile($event)" value="upload">
+<button class="btn btn-secondary" [disabled]= "!selectedFiles" (click)="upload">Subir</button>
+<div class="mensaje">
+    {{mensaje}}
+</div>

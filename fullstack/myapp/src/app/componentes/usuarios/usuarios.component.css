@@ -16,3 +16,16 @@
     width: calc(100% - 5rem);
     margin-left: 5rem;
 }
+.modal-content{
+    background: whitesmoke;
+}
+.modal-footer .btn {
+    background: salmon;
+    color: #ffff;
+    border-color: transparent;
+}
+.modal-footer .btn:hover {
+    background: rgb(62, 203, 177);
+    color: #ffff;
+    border-color: transparent;
+}

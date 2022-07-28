@@ -61,16 +61,6 @@
                         <textarea class="form-control" id="descripcion" [(ngModel)]="descripcion" rows="3"></textarea>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label>Precio</label>
-                            <input type="text" class="form-control" id="precio" [(ngModel)]="precio">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label>Descuento</label>
-                            <input type="text" class="form-control" id="descuento" [(ngModel)]="vrdescuento">
-                        </div>
-                    </div>
-                    <div class="form-row">
                         <div class="form-group col-md-4">
                             <label>Nuevo</label>
                             <select id="nuevo" [(ngModel)]="nuevo" class="form-control">
@@ -87,7 +77,24 @@
                                 <option>No</option>
                             </select>
                         </div>
-                        
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Precio</label>
+                            <input type="text" class="form-control" id="precio" [(ngModel)]="precio">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Descuento</label>
+                            <input type="text" class="form-control" id="descuento" [(ngModel)]="vrdescuento">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <app-subirarchivos 
+                        [urldestino]="item.destino"
+                        [path]="item.path"
+                        [fileName]="'userFile'"
+                        ></app-subirarchivos>
+                        <img [src]="'userFile'" style="height: 80px; width: 100px; align-content: center;">
                     </div>
                 </div>
                 <div class="modal-footer">

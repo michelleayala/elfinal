@@ -27,7 +27,7 @@ export const navbarData = [
     {
         routerLink:'/tienda',
         icon:'fas fa-close',
-        label:'Configuración',
+        label:'Logout',
     }
 
 ];

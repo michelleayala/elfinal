@@ -1,5 +1,101 @@
 <app-nav (onTogglenav)="onTogglenav($event)"></app-nav>
 <div class="usuarios" [ngClass]="getUsuariosClass()">
     <h1>Usuarios</h1>
+    <!-- Modal
+    <button type="button" class="btn btn-secondary" (click)="Nuevo()">Crear Usuario</button>
+    <div class="container">
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Contraseña</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Administrador</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of misdatos">
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.apellido}}</td>
+                        <td>{{item.usuario}}</td>
+                        <td>{{item.contraseña}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.telefono}}</td>
+                        <td>{{item.administrador}}</td>
+                        <td><button type="button" class="btn btn-info" (click)="Editar(item._id)"><i class="fas fa-pencil"></i></button></td>
+                        <td><button type="button" class="btn btn-danger" (click)="Eliminar(item._id)"><i class="fas fa-trash"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+    -->
+
 </div>
 
+
+<!-- Modal
+<div class="modal fade" id="modalproductos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Crear Producto</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label>codigo</label>
+                        <input type="text" class="form-control" id="nombre" [(ngModel)]="nombre" >
+                    </div>
+                    <div class="form-group col-md-8">
+                        <label>Nombre</label>
+                        <input type="text" class="form-control" id="apellido" [(ngModel)]="apellido">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label>codigo</label>
+                        <input type="text" class="form-control" id="usuario" [(ngModel)]="usuario" >
+                    </div>
+                    <div class="form-group col-md-8">
+                        <label>Nombre</label>
+                        <input type="text" class="form-control" id="contraseña" [(ngModel)]="contraseña">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label>codigo</label>
+                        <input type="text" class="form-control" id="email" [(ngModel)]="email" >
+                    </div>
+                    <div class="form-group col-md-8">
+                        <label>Nombre</label>
+                        <input type="text" class="form-control" id="telefono" [(ngModel)]="telefono">
+                    </div>
+                </div>
+                div class="form-group col-md-4">
+                    <label>Administrador</label>
+                    <select id="administrador" [(ngModel)]="administrador" class="form-control">
+                        <option selected>Seleccione</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn--radius-2 btn--blue" *ngIf="idseleccionado == ''" (click)="Guardar()">Crear</button>
+                <button type="button" class="btn btn--radius-2 btn--blue" *ngIf="idseleccionado != '' " (click)="Actualizar()">Actualizar</button>
+            </div>
+        </div>
+    </div>
+</div>
+-->
