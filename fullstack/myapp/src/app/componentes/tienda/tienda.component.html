@@ -2,40 +2,31 @@
 <header class="header">
     <a routerLink="/" class="logo"> <i class="fas fa-podcast"></i> Azumi Store </a>
     <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#products">Productos</a>
-        <a href="#featured">Destacados</a>
-        <a href="#contact">Contacto</a>
+        <a href="/tienda/#home">Home</a>
+        <a href="/tienda/#products">Productos</a>
+        <a href="/tiernda/#featured">Destacados</a>
+        <a href="/tienda/#contact">Contacto</a>
     </nav>
     <div class="icons">
         <div id="menu-btn" class="fas fa-bars"></div>
-        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="/carrito" class="fas fa-shopping-cart"></a>
         <a routerLink="/login" class="fas fa-user"></a>
     </div>
 </header>
 <!-- header section ends -->
 
 <!-- home section starts  -->
-<section class="home" id="home">s
+<section class="home" id="home">
     <div class="swiper home-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide slide" style="background:url(/assets/Banner1.jpg) no-repeat">
                 <div class="content">
                     <span>Hasta un 50% de Descuento</span>
                     <h3>Categoría 1</h3>
-                    <a href="" class="btn">Compra Ahora</a>
-                </div>
-            </div>
-            <div class="swiper-slide slide" style="background:url(/assets/Banner1.jpg) no-repeat">
-                <div class="content">
-                    <span>Hasta un 50% de Descuento</span>
-                    <h3>Categoría 2</h3>
-                    <a href="#" class="btn">Compra Ahora</a>
+                    <a href="/tienda/#products" class="btn">Compra Ahora</a>
                 </div>
             </div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
     </div>
 </section>
 <!-- home section ends -->
@@ -43,19 +34,19 @@
 <!-- banner section starts  -->
 <section class="banner-container">
     <div class="banner">
-        <img src="/img/Descuento 1.jpg" alt="">
+        <img src="/assets/Descuento 1.jpg" alt="">
         <div class="content">
             <span>Oferta Especial</span>
             <h3>Hasta un 50% de Descuento</h3>
-            <a href="#" class="btn">Compra Ahora</a>
+            <a href="#products" class="btn">Compra Ahora</a>
         </div>
     </div>
     <div class="banner">
-        <img src="/img/Descuento 2.jpg" alt="">
+        <img src="/assests/Descuento 2.jpg" alt="">
         <div class="content">
             <span>Oferta Especial</span>
             <h3>Hasta un 50% de Descuento</h3>
-            <a href="#" class="btn">Compra Ahora</a>
+            <a href="#products" class="btn">Compra Ahora</a>
         </div>
     </div>
 </section>
@@ -68,27 +59,29 @@
         <div class="buttons active" data-filter="todo">Todo</div>
         <div class="buttons" data-filter="nuevo">Nuevos</div>
         <div class="buttons" data-filter="destacados">Destacados</div>
-        <div class="buttons" data-filter="especial">Ofertas Especiales</div>
         <div class="buttons" data-filter="top-vendios">Más Vendidos</div>
+        <div class="buttons" data-filter="ofertas">Ofertas</div>
     </div>
-    <div class="box-container">
-        <div class="box" data-item="|">
-            <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <div class="image">
-                <img src="/assets/lego4.png" alt="">
-            </div>
-            <div class="content">
-                <h3>AUTO DE CARRERAS MCLAREN FORMULA 1™</h3>
-                <div class="price">
-                    <div class="amount">1.399.900</div>
-                    <div class="cut">1.259.910</div>
-                    <div class="offer">10%</div>
+    <div class="filter-product">
+        <div class="box-container">
+            <div class="box" data-category="">
+                <div class="icons">
+                    <a href="/carrito" class="fas fa-shopping-cart"></a>
+                    <a href="/mantenimiento" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="/assets/lego4.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>AUTO DE CARRERAS MCLAREN FORMULA 1™</h3>
+                    <div class="price">
+                        <div class="amount">1.399.900</div>
+                        <div class="cut">1.259.910</div>
+                        <div class="offer">10%</div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div>    
     </div>
 </section>
 <!-- productos section ends -->
@@ -101,7 +94,7 @@
             <div class="swiper-slide">
                 <div class="box" data-item="...">
                     <div class="image">
-                        <img src="/assets/lego.png" alt="">
+                        <img src="/assets/lego3.png" alt="">
                     </div>
                     <div class="content">
                         <h3>AUTO DE CARRERAS MCLAREN FORMULA 1™</h3>
@@ -111,7 +104,7 @@
             <div class="swiper-slide">
                 <div class="box" data-item="...">
                     <div class="image">
-                        <img src="/assets/lego.png" alt="">
+                        <img src="/assets/lego4.png" alt="">
                     </div>
                     <div class="content">
                         <h3>BMW M 1000 RR</h3>
@@ -121,7 +114,7 @@
             <div class="swiper-slide">
                 <div class="box" data-item="...">
                     <div class="image">
-                        <img src="/assets/lego.png" alt="">
+                        <img src="/assets/lego5.png" alt="">
                     </div>
                     <div class="content">
                         <h3>LAMBORGHINI SIAN</h3>
@@ -141,7 +134,7 @@
             <div class="swiper-slide">
                 <div class="box" data-item="...">
                     <div class="image">
-                        <img src="/assets/lego.png" alt="">
+                        <img src="/assets/lego3.png" alt="">
                     </div>
                     <div class="content">
                         <h3>GRUA SOBRE ORUGAS COMPACTA</h3>
@@ -204,10 +197,10 @@
         </div>
         <div class="box">
             <h3>Enlaces Rápidos</h3>
-            <a href="#home"> <i class="fas fa-arrow-right"></i> Home </a>
-            <a href="#products"> <i class="fas fa-arrow-right"></i> Productos </a>
-            <a href="#featured"> <i class="fas fa-arrow-right"></i> Destacados </a>
-            <a href="#contact"> <i class="fas fa-arrow-right"></i> Contacto </a>
+            <a href="/tienda/#home"> <i class="fas fa-arrow-right"></i> Home </a>
+            <a href="/tienda/#products"> <i class="fas fa-arrow-right"></i> Productos </a>
+            <a href="/tienda/#featured"> <i class="fas fa-arrow-right"></i> Destacados </a>
+            <a href="/tienda/#contact"> <i class="fas fa-arrow-right"></i> Contacto </a>
             <a routerLink="/terminos" target="_blank"> <i class="fas fa-arrow-right"></i> Términos y Condiciones </a>
             <a routerLink="/condiciones" target="_blank"> <i class="fas fa-arrow-right"></i> Politica de Privacidad </a>
         </div>
