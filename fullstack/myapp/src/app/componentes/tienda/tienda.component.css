@@ -73,7 +73,7 @@ section {
   background: #fff;
 }
 .header .logo {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: #2e2c2caf;
   font-weight: bolder;
 }
@@ -81,7 +81,7 @@ section {
   color: #dd2476;
 }
 .header .navbar a {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: #666;
   margin: 0 1rem;
 }
@@ -90,7 +90,7 @@ section {
 }
 .header .icons div,
 .header .icons a {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin-left: 2rem;
 }
 #menu-btn {
@@ -114,11 +114,11 @@ section {
   background-position: center;
 }
 .home .home-slider .slide .content span {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #666;
 }
 .home .home-slider .slide .content h3 {
-  font-size: 6rem;
+  font-size: 4rem;
   color: black;
   padding-top: .5rem;
 }
@@ -127,7 +127,7 @@ section {
 .banner-container {
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 1.5rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -158,11 +158,11 @@ section {
   transform: translateY(-50%);
 }
 .banner-container .banner .content span {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #dd2476;
 }
 .banner-container .banner .content h3 {
-  font-size: 3.2rem;
+  font-size: 2rem;
   color: black;
   padding-top: .5rem;
 }
@@ -179,7 +179,7 @@ section {
   gap: 2rem;
 }
 .products .filter-buttons .buttons {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   color: #666;
   cursor: pointer;
 }
@@ -196,7 +196,7 @@ section {
   justify-content: center;
 }
 .products .box-container .box {
-  width: 40rem;
+  width: 20rem;
   border-radius: .5rem;
   overflow: hidden;
   position: relative;
@@ -227,7 +227,7 @@ section {
   z-index: 1;
 }
 .products .box-container .box .icons a {
-  font-size: 2rem;
+  font-size: 1.5rem;
   height: 5rem;
   width: 5rem;
   line-height: 5rem;
@@ -240,8 +240,8 @@ section {
   transform: scale(1);
 }
 .products .box-container .box .image {
-  height: 35rem;
-  width: 100%;
+  height: 20rem;
+  width: 20rem;
   overflow: hidden;
 }
 .products .box-container .box .image img {
@@ -254,7 +254,7 @@ section {
   padding: 1rem 1.5rem;
 }
 .products .box-container .box .content h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: black;
   font-weight: normal;
 }
@@ -267,17 +267,17 @@ section {
   align-items: center;
 }
 .products .box-container .box .content .price .amount {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   font-weight: bolder;
   color: black;
 }
 .products .box-container .box .content .price .cut {
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-decoration: line-through;
   color: #666;
 }
 .products .box-container .box .content .price .offer {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #dd2476;
 }
 
@@ -288,7 +288,7 @@ section {
 }
 .featured .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.5rem;
   background: transparent;
   display: flex;
   -webkit-box-pack: center;
@@ -302,16 +302,16 @@ section {
 }
 .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   object-fit: cover;
 }
 
 /* Contact */
 .contact .icons-container {
   display: grid;
-  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  -ms-grid-columns: (minmax(18rem, 1fr))[auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   gap: 1.5rem;
 }
 .contact .icons-container .icons {
@@ -321,7 +321,7 @@ section {
   text-align: center;
 }
 .contact .icons-container .icons i {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   height: 6rem;
   width: 6rem;
   line-height: 6rem;
@@ -329,12 +329,12 @@ section {
   border-radius: 50%;
 }
 .contact .icons-container .icons h3 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   padding: 1rem 0;
   color: black;
 }
 .contact .icons-container .icons p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 2;
   color: #666;
 }
@@ -354,7 +354,7 @@ section {
   border-radius: .5rem;
 }
 .contact .row form h3 {
-  font-size: 3rem;
+  font-size: 1.8rem;
   padding-bottom: 1rem;
   color: black;
 }
@@ -367,14 +367,14 @@ section {
   justify-content: space-between;
 }
 .contact .row form .inputBox input {
-  width: 49%;
+  width: 45%;
 }
 .contact .row form .inputBox input,
 .contact .row form textarea {
   border: 0.1rem solid rgba(0, 0, 0, 0.3);
   border-radius: .5rem;
-  padding: 1rem 1.2rem;
-  font-size: 1.6rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
   color: black;
   text-transform: none;
   margin: .7rem 0;
@@ -385,11 +385,10 @@ section {
   width: 100%;
 }
 .contact .row .map {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 42rem;
-  flex: 1 1 42rem;
+  -ms-flex: 3 3 20rem;
+  flex: 3 3 20rem;
   width: 100%;
-  padding: 2rem;
+  padding: 9rem;
   border: 0.1rem solid rgba(0, 0, 0, 0.3);
   border-radius: .5rem;
 }
@@ -406,19 +405,19 @@ section {
   gap: 1.5rem;
 }
 .footer .box-container .box h3 {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   color: black;
   padding: 1rem 0;
 }
 .footer .box-container .box p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #666;
   padding: 1rem 0;
   line-height: 2;
 }
 .footer .box-container .box a {
   display: block;
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: #666;
   padding: 1rem 0;
 }
@@ -437,10 +436,10 @@ section {
   text-align: center;
 }
 .footer .share a {
-  font-size: 2rem;
-  height: 5rem;
-  width: 5rem;
-  line-height: 5rem;
+  font-size: 1.5rem;
+  height: 4rem;
+  width: 4rem;
+  line-height: 4rem;
   border-radius: 50%;
   background: black;
   color: #fff;
@@ -458,7 +457,7 @@ section {
   border-top: 0.1rem solid rgba(0, 0, 0, 0.3);
   text-align: center;
   color: #666;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .footer .credit span {
   color: #dd2476;

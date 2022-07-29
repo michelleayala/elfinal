@@ -1,6 +1,6 @@
 .categorias {
     width: calc(100% - 5rem);
-    height: 100vh;
+    height: 100%;
     margin-left: 5rem;
     z-index: 0;
     position: relative;
@@ -72,4 +72,14 @@ h5 {
     .col-2 {
         width: 100%;
     }
+}
+.categorias .btn-secondary {
+    background: salmon;
+    color: #ffff;
+    border-color: transparent;
+}
+.categorias .btn-secondary:hover {
+    background: rgb(62, 203, 177);
+    color: #ffff;
+    border-color: transparent;
 }

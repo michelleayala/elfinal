@@ -1,6 +1,7 @@
 var usuario = require('./api/controladores/registroControllers').usuario
 var productos = require('./api/controladores/productosControllers.js').productosController
 var categorias = require('./api/controladores/categoriasControllers.js').categoriasController
+var registro = require('./api/controladores/registroControllers.js').registroController
 
 
 app.post('/productos/Guardar', function (request, response) {
@@ -84,24 +85,23 @@ app.post('/categorias/Eliminar', function (request, response) {
     categorias.Eliminar(request, response)
 })
 
-/*
-app.post('/usuarios/Guardar', function (request, response) {
-    productos.Guardar(request, response)
+
+app.post('/registro/Guardar', function (request, response) {
+    registro.Guardar(request, response)
 })
 
-app.post('/usuarios/CargarTodas', function (request, response) {
-    productos.CargarTodas(request, response)
+app.post('/registro/CargarTodas', function (request, response) {
+    registro.CargarTodas(request, response)
 })
-app.post('/usuarios/CargarId', function (request, response) {
-    productos.CargarId(request, response)
-})
-
-app.post('/usuarios/Actualizar', function (request, response) {
-    productos.Actualizar(request, response)
+app.post('/registro/CargarId', function (request, response) {
+    registro.CargarId(request, response)
 })
 
-app.post('/usuarios/Eliminar', function (request, response) {
-    productos.Eliminar(request, response)
+app.post('/registro/Actualizar', function (request, response) {
+    registro.Actualizar(request, response)
 })
-*/
+
+app.post('/registro/Eliminar', function (request, response) {
+    registro.Eliminar(request, response)
+})
 

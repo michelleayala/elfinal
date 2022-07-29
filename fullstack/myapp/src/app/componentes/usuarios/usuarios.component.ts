@@ -39,28 +39,28 @@ export class  UsuariosComponent implements OnInit {
     return styleClass;
   }
  
-  constructor() { }
+  constructor(private peticion: PeticionesService, private msg:MensajesService) { }
 
   ngOnInit(): void {
-    
+    this.CargarTodas()
   }
   
-  /*
+ 
   datosUsuario:any[] = [];
   
   nombre:string = ""
   apellido:string = ""
   usuario:string = ""
-  contraseña: string = ""
+  password: string = ""
   email:string = ""
-  telefono:number = 1
-  administrador:tring = ""
+  telefono:string = ""
+  perfil:string = ""
   idseleccionado:string = ''
 
   CargarTodas(){
     var post = {
       host:this.peticion.urlLocal,
-      path:'/usuarios/CargarTodas',
+      path:'/registro/CargarTodas',
       payload:{
       }
     }
@@ -74,15 +74,15 @@ export class  UsuariosComponent implements OnInit {
   Guardar(){
     var post = {
       host:this.peticion.urlLocal,
-      path:'/usuarios/Guardar',
+      path:'/registro/Guardar',
       payload:{
         nombre:this.nombre,
         apellido:this.apellido,
         usuario:this.usuario,
-        contraseña:this.contraseña,
+        password:this.password,
         email: this.email,
         telefono:this.telefono,
-        administrador:this.administrador,
+        perfil:this.perfil,
       }
     }
     console.log(post)
@@ -94,17 +94,17 @@ export class  UsuariosComponent implements OnInit {
         this.CargarTodas()
         this.Limpiar()
         $('#modalusuarios').modal('hide')
+        
       }else{
         this.msg.AgregarMensajes('danger',res.mensaje,5000)
       }
     })
   }
-
   
   Eliminar(myid:string){
     var post = {
       host:this.peticion.urlLocal,
-      path:'/usuarios/Eliminar',
+      path:'/registro/Eliminar',
       payload:{
        id:myid
       }
@@ -126,7 +126,7 @@ export class  UsuariosComponent implements OnInit {
     this.idseleccionado = myid
     var post = {
       host:this.peticion.urlLocal,
-      path:'/usuarios/CargarId',
+      path:'/registro/CargarId',
       payload:{
        id:myid
         }
@@ -139,10 +139,10 @@ export class  UsuariosComponent implements OnInit {
         this.nombre = res.documentos[0].nombre
         this.apellido = res.documentos[0].apellido
         this.usuario = res.documentos[0].usuario
-        this.contraseña = res.documentos[0].contraseña
+        this.password = res.documentos[0].password
         this.email = res.documentos[0].email
         this.telefono = res.documentos[0].telefono
-        this.administrador = res.documentos[0].administrador
+        this.perfil = res.documentos[0].perfil
         $('#modalusuarios').modal('show')
       }
     })
@@ -158,26 +158,26 @@ export class  UsuariosComponent implements OnInit {
     this.nombre = ""
     this.apellido = ""
     this.usuario = ""
-    this.contraseña = ""
+    this.password = ""
     this.email = ""
-    this.telefono = 1
-    this.administrador = ""
+    this.telefono = ""
+    this.perfil = ""
 
   }
 
   Actualizar(){
     var post = {
       host:this.peticion.urlLocal,
-      path:'/usuarios/Actualizar',
+      path:'/registro/Actualizar',
       payload:{
         id:this.idseleccionado,
         nombre:this.nombre,
         apellido:this.apellido,
         usuario:this.usuario,
-        contraseña:this.contraseña,
+        password:this.password,
         email: this.email,
         telefono:this.telefono,
-        administrador:this.administrador,
+        perfil:this.perfil,
       }
     }
     console.log(post)
@@ -194,5 +194,4 @@ export class  UsuariosComponent implements OnInit {
       }
     })
   }
-  */
 }

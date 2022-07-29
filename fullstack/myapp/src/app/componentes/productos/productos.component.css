@@ -32,3 +32,13 @@
     color: #ffff;
     border-color: transparent;
 }
+.productos .btn-secondary {
+    background: salmon;
+    color: #ffff;
+    border-color: transparent;
+}
+.productos .btn-secondary:hover {
+    background: rgb(62, 203, 177);
+    color: #ffff;
+    border-color: transparent;
+}

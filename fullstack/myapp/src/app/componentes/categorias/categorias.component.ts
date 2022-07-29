@@ -112,7 +112,7 @@ export class CategoriasComponent implements OnInit {
     this.idseleccionado = myid
     var post = {
       host:this.peticion.urlLocal,
-      path:'/productos/CargarId',
+      path:'/categorias/CargarId',
       payload:{
        id:myid
         }
@@ -143,7 +143,7 @@ export class CategoriasComponent implements OnInit {
   Actualizar(){
     var post = {
       host:this.peticion.urlLocal,
-      path:'/productos/Actualizar',
+      path:'/categorias/Actualizar',
       payload:{
         id:this.idseleccionado,
         codigo:this.codigo,
