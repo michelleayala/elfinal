@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MensajesService } from 'src/app/servicios/mensajes.service';
 import { PeticionesService } from 'src/app/servicios/peticiones.service';
+declare var swal: any
 
 interface NavToggle{
   screenWidth: number;
@@ -74,6 +75,7 @@ export class CategoriasComponent implements OnInit {
       console.log(res)
       if(res.state == true){
         this.msg.AgregarMensajes('success',res.mensaje,5000)
+        swal("Good job!", "Categoria creada Correctamente!", "success");
         this.CargarTodas()
         this.Limpiar()
       }else{
@@ -99,6 +101,7 @@ export class CategoriasComponent implements OnInit {
       console.log(res)
       if(res.state == true){
         this.msg.AgregarMensajes('success',res.mensaje,5000)
+        swal("Cuidado!", "Categoria Eliminada Correctamente!", "warning");
         this.CargarTodas()
       }else{
         this.msg.AgregarMensajes('danger',res.mensaje,5000)
@@ -135,7 +138,7 @@ export class CategoriasComponent implements OnInit {
   }
 
   Limpiar(){
-    
+    this.idseleccionado = ""
     this.codigo = ""
     this.nombre = ""
   }
@@ -156,6 +159,7 @@ export class CategoriasComponent implements OnInit {
       console.log(res)
       if(res.state == true){
         this.msg.AgregarMensajes('success',res.mensaje,5000)
+        swal("Good job!", "Categoria Actualizada Correctamente!", "success");
         this.CargarTodas()
         this.Limpiar()
       }else{

@@ -13,6 +13,7 @@ productosController.Guardar = function(request,response){
         nuevo:request.body.nuevo,
         destacado:request.body.destacado,
         mas_vendido:request.body.mas_vendido,
+        imagenproducto:request.body.imagenproducto
     }
     if (post.codigo == '' || post.codigo == undefined || post.codigo == null ){
         response.json({state:false,mensaje:'el campo del codigo es obligatorio'})
@@ -32,6 +33,10 @@ productosController.Guardar = function(request,response){
     } 
     if (post.cantidad == '' || post.cantidad == undefined || post.cantidad == null ){
         response.json({state:false,mensaje:'el campo de la cantidad es obligatorio'})
+        return false
+    } 
+    if (post.imagenproducto == '' || post.imagenproducto == undefined || post.imagenproducto == null ){
+        response.json({state:false,mensaje:'el campo de la imagenproducto es obligatorio'})
         return false
     } 
 
@@ -77,6 +82,7 @@ productosController.Actualizar = function(request,response){
         vrdescuento:request.body.vrdescuento,
         nuevo:request.body.nuevo,
         destacado:request.body.destacado,
+        imagenproducto:request.body.imagenproducto
     }
     
     if (post.id == '' || post.id == undefined || post.id == null ){
@@ -89,10 +95,6 @@ productosController.Actualizar = function(request,response){
     } 
     if (post.nombre == '' || post.nombre == undefined || post.nombre == null ){
         response.json({state:false,mensaje:'el campo del nombre es obligatorio'})
-        return false
-    } 
-    if (post.descripcion == '' || post.descripcion == undefined || post.descripcion == null ){
-        response.json({state:false,mensaje:'el campo de la descripción es obligatorio'})
         return false
     } 
     if (post.precio == '' || post.precio == undefined || post.precio == null ){
@@ -113,6 +115,10 @@ productosController.Actualizar = function(request,response){
     } 
     if (post.destacado == '' || post.destacado == undefined || post.destacado == null ){
         response.json({state:false,mensaje:'el campo de la destacado es obligatorio'})
+        return false
+    } 
+    if (post.imagenproducto == '' || post.imagenproducto == undefined || post.imagenproducto == null ){
+        response.json({state:false,mensaje:'el campo de la imagenproducto es obligatorio'})
         return false
     } 
 

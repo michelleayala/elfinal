@@ -1,5 +1,5 @@
 import { HttpEventType, HttpResponse } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { SubirarchivosService } from 'src/app/servicios/subirarchivos.service';
 
 @Component({
@@ -21,6 +21,7 @@ export class SubirarchivosComponent implements OnInit {
   @Input() urldestino:string = ''
   @Input() path:string = ''
   @Input() fileName:string = ''
+  @Output() imagensubida: EventEmitter<any> = new EventEmitter();
 
   selectFile(event:any):void{
     this.selectedFiles = event.target.files
@@ -37,7 +38,7 @@ export class SubirarchivosComponent implements OnInit {
         }
         else if (event instanceof HttpResponse) {
           this.mensaje = event.body.mensaje
-
+          this.imagensubida.emit(event.body)
         }  
       },
       err => {

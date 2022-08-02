@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MensajesService } from 'src/app/servicios/mensajes.service';
 import { PeticionesService } from 'src/app/servicios/peticiones.service';
 //import * as $ from 'jquery';
+declare var swal: any
 
 declare var $:any
 
@@ -56,6 +57,8 @@ export class ProductosComponent implements OnInit {
   destacado:string = ""
   descripcion:string = ""
   idseleccionado:string = ''
+  nombreimagen:string = ""
+  imagenproducto:string = "default.png"
 
   CargarTodas(){
     var post = {
@@ -72,6 +75,7 @@ export class ProductosComponent implements OnInit {
   }
 
   Guardar(){
+    
     var post = {
       host:this.peticion.urlLocal,
       path:'/productos/Guardar',
@@ -83,7 +87,8 @@ export class ProductosComponent implements OnInit {
         cantidad: this.cantidad,
         vrdescuento:this.vrdescuento,
         nuevo:this.nuevo,
-        destacado:this.destacado
+        destacado:this.destacado,
+        imagenproducto:this.imagenproducto
         }
     }
     console.log(post)
@@ -92,6 +97,7 @@ export class ProductosComponent implements OnInit {
       console.log(res)
       if(res.state == true){
         this.msg.AgregarMensajes('success',res.mensaje,5000)
+        swal("Good job!", "Producto creado Correctamente!", "success");
         this.CargarTodas()
         this.Limpiar()
         $('#modalproductos').modal('hide')
@@ -103,6 +109,7 @@ export class ProductosComponent implements OnInit {
   }
 
   Eliminar(myid:string){
+
     var post = {
       host:this.peticion.urlLocal,
       path:'/productos/Eliminar',
@@ -116,6 +123,7 @@ export class ProductosComponent implements OnInit {
       console.log(res)
       if(res.state == true){
         this.msg.AgregarMensajes('success',res.mensaje,5000)
+        swal("Cuidado!", "Producto eliminado Correctamente!", "warning");
         this.CargarTodas()
       }else{
         this.msg.AgregarMensajes('danger',res.mensaje,5000)
@@ -126,6 +134,7 @@ export class ProductosComponent implements OnInit {
   }
 
   Editar(myid:string){
+    
     this.idseleccionado = myid
     var post = {
       host:this.peticion.urlLocal,
@@ -147,6 +156,7 @@ export class ProductosComponent implements OnInit {
         this.nuevo = res.documentos[0].nuevo
         this.destacado = res.documentos[0].destacado
         this.descripcion = res.documentos[0].descripcion
+        this.imagenproducto = res.documentos[0].imagenproducto
         $('#modalproductos').modal('show')
       }
       
@@ -169,9 +179,11 @@ export class ProductosComponent implements OnInit {
     this.vrdescuento
     this.nuevo= ""
     this.destacado= ""
+    this.nombreimagen= ""
   }
 
   Actualizar(){
+    
     var post = {
       host:this.peticion.urlLocal,
       path:'/productos/Actualizar',
@@ -184,7 +196,8 @@ export class ProductosComponent implements OnInit {
         cantidad: this.cantidad,
         vrdescuento:this.vrdescuento,
         nuevo:this.nuevo,
-        destacado:this.destacado
+        destacado:this.destacado,
+        imagenproducto:this.imagenproducto
         }
     }
     console.log(post)
@@ -193,6 +206,7 @@ export class ProductosComponent implements OnInit {
       console.log(res)
       if(res.state == true){
         this.msg.AgregarMensajes('success',res.mensaje,5000)
+        swal("Good job!", "Producto Actualizado Correctamente!", "info");
         this.CargarTodas()
         this.Limpiar()
         $('#modalproductos').modal('hide')
@@ -207,4 +221,10 @@ export class ProductosComponent implements OnInit {
     path: '/subirImagen',
     destino:'http://localhost:3000'
   }
+
+  cambiarimagen(event:any){
+  console.log(event)
+  this.nombreimagen=event.nombre
+  }
 }
+

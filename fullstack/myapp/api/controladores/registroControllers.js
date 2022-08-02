@@ -141,4 +141,30 @@ registroController.Eliminar = function(request,response){
         }
     })
 }
+
+registroController.Iniciar = function(request,response){
+       var post = {
+        usuario:request.body.usuario,
+        password:request.body.password
+       }
+
+    if (post.usuario == '' || post.usuario == undefined || post.usuario == null ){
+        response.json({state:false,mensaje:'Usuario obligatorio'})
+        return false
+    } 
+
+    if (post.password == '' || post.password == undefined || post.password == null ){
+        response.json({state:false,mensaje:'password obligatorio'})
+        return false
+    } 
+
+    registroModel.Iniciar(post,function(respuesta){       
+        if(respuesta < 0){
+        response.json({state:false,mensaje:'Sus credenciales no son validas'})
+        }else{
+        response.json({state:true,mensaje:'Has Iniciado Sesión Correctamente'})
+    }
+    })
+}
+
 module.exports.registroController= registroController

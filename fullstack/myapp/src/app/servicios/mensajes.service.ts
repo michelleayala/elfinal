@@ -17,7 +17,7 @@ export class MensajesService {
 
     AgregarMensajes(tipox:string,mensajex:string,tiempo:number){
       
-      this.msgDatos.push({tipo:tipox,mensajes:mensajex})
+      this.msgDatos.push({tipo:tipox,mensaje:mensajex})
       this.eliminarmensaje(tiempo)
     }
 

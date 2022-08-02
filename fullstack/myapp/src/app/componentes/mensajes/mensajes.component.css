@@ -1,3 +1,5 @@
 .alert {
-    margin-top: 1rem;
+    position: absolute;
+    right: 10px;
+    width: 30%;
 }

@@ -104,9 +104,15 @@
                         [urldestino]="item.destino"
                         [path]="item.path"
                         [fileName]="'userFile'"
+                        (imagensubida)="cambiarimagen($event)"
                         ></app-subirarchivos>
-                        <img [src]="'userFile'" style="height: 80px; width: 100px; align-content: center;">
+                        <img src="http://localhost:3000/imagenes/{{imagenproducto}}" style="height: 150px; width: 150px; margin-left: 9rem;">
                     </div>
+                    <div class="form-group col-md-8">
+                        <label>Nombre imagen</label>
+                        <input type="text" class="form-control" id="Nombreimagen" [(ngModel)]="imagenproducto">
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

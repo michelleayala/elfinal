@@ -11,7 +11,8 @@ var productosSchema = new Schema({
     vrdescuento:String,
     nuevo:String,
     destacado:String,
-    mas_vendido:String
+    mas_vendido:String,
+    imagenproducto:String
 })
 
 const MyModel = mongoose.model('productos',productosSchema)
@@ -28,6 +29,7 @@ productosModel.Guardar = function(post,callback){
     instancia.nuevo =  post.nuevo;
     instancia.destacado =  post.destacado;
     instancia.mas_vendido =  post.mas_vendido;
+    instancia.imagenproducto = post.imagenproducto;
 
     instancia.save((error,creado) =>{
         if(error){
@@ -39,7 +41,7 @@ productosModel.Guardar = function(post,callback){
 }
 productosModel.CargarTodas = function(post,callback){
     
-    MyModel.find({},{codigo:1,nombre:1,descripcion:1,precio:1,cantidad:1,vrdescuento:1,nuevo:1,destacado:1,mas_vendido:1,_id:1},(error,documentos) => {
+    MyModel.find({},{codigo:1,nombre:1,descripcion:1,precio:1,cantidad:1,vrdescuento:1,nuevo:1,destacado:1,mas_vendido:1,imagenproducto:1,_id:1},(error,documentos) => {
         if(error){
             return callback({state:false,info:error})
         }
@@ -50,7 +52,7 @@ productosModel.CargarTodas = function(post,callback){
 }
 productosModel.CargarId = function(post,callback){
     
-    MyModel.find({_id:post.id},{codigo:1,nombre:1,precio:1,cantidad:1,vrdescuento:1,nuevo:1,destacado:1,mas_vendido:1,_id:1},(error,documentos) => {
+    MyModel.find({_id:post.id},{codigo:1,nombre:1,precio:1,cantidad:1,vrdescuento:1,nuevo:1,destacado:1,mas_vendido:1,imagenproducto:1,_id:1},(error,documentos) => {
         if(error){
             return callback({state:false,info:error})
         }
@@ -70,6 +72,7 @@ productosModel.Actualizar = function(post,callback){
         nuevo:post.nuevo,
         destacado:post.destacado,
         mas_vendido:post.mas_vendido,
+        imagenproducto:post.imagenproducto
     },(error,modificado) => {
         if(error){
             return callback({state:false,info:error})

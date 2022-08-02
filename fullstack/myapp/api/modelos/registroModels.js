@@ -92,7 +92,7 @@ registroModel.Eliminar = function(post,callback){
     })
 }
 
-registroModel.iniciarsesion = function(post,callback){
+registroModel.Iniciar = function(post,callback){
 
     MyModel.find((error,eliminado) => {
         if(error){

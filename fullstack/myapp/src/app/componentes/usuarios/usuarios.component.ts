@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MensajesService } from 'src/app/servicios/mensajes.service';
 import { PeticionesService } from 'src/app/servicios/peticiones.service';
 //import * as $ from 'jquery';
+declare var swal: any
 
 declare var $:any
 
@@ -72,6 +73,7 @@ export class  UsuariosComponent implements OnInit {
   }
 
   Guardar(){
+
     var post = {
       host:this.peticion.urlLocal,
       path:'/registro/Guardar',
@@ -91,6 +93,7 @@ export class  UsuariosComponent implements OnInit {
       console.log(res)
       if(res.state == true){
         this.msg.AgregarMensajes('success',res.mensaje,5000)
+        swal("Good job!", "Usuario Creado Correctamente!", "success");
         this.CargarTodas()
         this.Limpiar()
         $('#modalusuarios').modal('hide')
@@ -102,6 +105,7 @@ export class  UsuariosComponent implements OnInit {
   }
   
   Eliminar(myid:string){
+    
     var post = {
       host:this.peticion.urlLocal,
       path:'/registro/Eliminar',
@@ -115,6 +119,7 @@ export class  UsuariosComponent implements OnInit {
       console.log(res)
       if(res.state == true){
         this.msg.AgregarMensajes('success',res.mensaje,5000)
+        swal("Cuidado!", "Usuario Eliminado Correctamente!", "warning");
         this.CargarTodas()
       }else{
         this.msg.AgregarMensajes('danger',res.mensaje,5000)
@@ -123,6 +128,7 @@ export class  UsuariosComponent implements OnInit {
   }
 
   Editar(myid:string){
+    
     this.idseleccionado = myid
     var post = {
       host:this.peticion.urlLocal,
@@ -166,6 +172,7 @@ export class  UsuariosComponent implements OnInit {
   }
 
   Actualizar(){
+    
     var post = {
       host:this.peticion.urlLocal,
       path:'/registro/Actualizar',
@@ -186,6 +193,7 @@ export class  UsuariosComponent implements OnInit {
       console.log(res)
       if(res.state == true){
         this.msg.AgregarMensajes('success',res.mensaje,5000)
+        swal("Good job!", "Usuario Actualizado Correctamente!", "success");
         this.CargarTodas()
         this.Limpiar()
         $('#modalusuarios').modal('hide')

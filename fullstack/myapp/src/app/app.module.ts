@@ -18,6 +18,7 @@ import { CerrarComponent } from './componentes/cerrar/cerrar.component';
 import { FormsModule } from '@angular/forms';
 import { MensajesComponent } from './componentes/mensajes/mensajes.component';
 import { SubirarchivosComponent } from './componentes/subirarchivos/subirarchivos.component';
+import { CarritoComponent } from './componentes/carrito/carrito.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { SubirarchivosComponent } from './componentes/subirarchivos/subirarchivo
     CerrarComponent,
     MensajesComponent,
     SubirarchivosComponent,
+    CarritoComponent,
   ],
   imports: [
     BrowserModule,

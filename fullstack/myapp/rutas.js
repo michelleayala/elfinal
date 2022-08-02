@@ -2,7 +2,7 @@ var usuario = require('./api/controladores/registroControllers').usuario
 var productos = require('./api/controladores/productosControllers.js').productosController
 var categorias = require('./api/controladores/categoriasControllers.js').categoriasController
 var registro = require('./api/controladores/registroControllers.js').registroController
-
+var carro = require('./api/controladores/carroControllers.js').carroControllers
 
 app.post('/productos/Guardar', function (request, response) {
     productos.Guardar(request, response)
@@ -24,6 +24,7 @@ app.post('/productos/Eliminar', function (request, response) {
 })
 
 const multer = require('multer')
+var nombreArchivo = ""
 
 app.post('/subirImagen', function (request, response) {
 
@@ -38,6 +39,7 @@ app.post('/subirImagen', function (request, response) {
                 callback(null, appRoot + post.ruta)
             },
             filename: function (request, file, callback) {
+                nombreArchivo = file.originalname
                 callback(null, file.originalname)
             }
         }),
@@ -58,7 +60,8 @@ app.post('/subirImagen', function (request, response) {
         }
         else {
             console.log('ok')
-            response.json({ state: true, mensaje: 'Archivo Cargado' })
+            response.json({ state: true, mensaje: 'Archivo Cargado' , nombre:nombreArchivo})
+
         }
     })
 
@@ -105,3 +108,6 @@ app.post('/registro/Eliminar', function (request, response) {
     registro.Eliminar(request, response)
 })
 
+app.post('/registro/Iniciar', function (request, response) {
+    registro.Iniciar(request, response)
+})

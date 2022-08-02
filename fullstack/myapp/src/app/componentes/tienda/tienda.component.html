@@ -4,12 +4,11 @@
     <nav class="navbar">
         <a href="/tienda/#home">Home</a>
         <a href="/tienda/#products">Productos</a>
-        <a href="/tiernda/#featured">Destacados</a>
         <a href="/tienda/#contact">Contacto</a>
     </nav>
     <div class="icons">
         <div id="menu-btn" class="fas fa-bars"></div>
-        <a href="/carrito" class="fas fa-shopping-cart"></a>
+        <a routerLink="/carro" class="fas fa-shopping-cart"></a>
         <a routerLink="/login" class="fas fa-user"></a>
     </div>
 </header>
@@ -34,7 +33,7 @@
 <!-- banner section starts  -->
 <section class="banner-container">
     <div class="banner">
-        <img src="/assets/Descuento 1.jpg" alt="">
+        <img src="/assets/publicidad1.jpg" alt="">
         <div class="content">
             <span>Oferta Especial</span>
             <h3>Hasta un 50% de Descuento</h3>
@@ -42,7 +41,7 @@
         </div>
     </div>
     <div class="banner">
-        <img src="/assests/Descuento 2.jpg" alt="">
+        <img src="/assets/publicidad2.jpg" alt="">
         <div class="content">
             <span>Oferta Especial</span>
             <h3>Hasta un 50% de Descuento</h3>
@@ -55,97 +54,36 @@
 <!-- productos section starts  -->
 <section class="products" id="products">
     <h1 class="heading"> Productos</h1>
-    <div class="filter-buttons">
+    <div class="filter-buttons" >
         <div class="buttons active" data-filter="todo">Todo</div>
         <div class="buttons" data-filter="nuevo">Nuevos</div>
         <div class="buttons" data-filter="destacados">Destacados</div>
-        <div class="buttons" data-filter="top-vendios">Más Vendidos</div>
         <div class="buttons" data-filter="ofertas">Ofertas</div>
     </div>
     <div class="filter-product">
         <div class="box-container">
-            <div class="box" data-category="">
+
+            <div class="box" data-category="" *ngFor="let item of misproductos">
                 <div class="icons">
-                    <a href="/carrito" class="fas fa-shopping-cart"></a>
+                    <a href="/carro" class="fas fa-shopping-cart"></a>
                     <a href="/mantenimiento" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="/assets/lego4.png" alt="">
+                    <img src="http://localhost:3000/imagenes/{{item.imagenproducto}}" alt="">
                 </div>
                 <div class="content">
-                    <h3>AUTO DE CARRERAS MCLAREN FORMULA 1™</h3>
+                    <h3>{{item.nombre}}</h3>
                     <div class="price">
-                        <div class="amount">1.399.900</div>
-                        <div class="cut">1.259.910</div>
-                        <div class="offer">10%</div>
+                        <div class="amount">{{item.vrdescuento}}</div>
+                        <div class="cut">{{item.precio}}</div>
                     </div>
                 </div>
             </div>
+
         </div>    
     </div>
 </section>
 <!-- productos section ends -->
-
-<!-- Destacados section starts  -->
-<section class="featured" id="featured">
-    <h1 class="heading"> <span>Productos</span> Destacados </h1>
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="box" data-item="...">
-                    <div class="image">
-                        <img src="/assets/lego3.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>AUTO DE CARRERAS MCLAREN FORMULA 1™</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="box" data-item="...">
-                    <div class="image">
-                        <img src="/assets/lego4.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>BMW M 1000 RR</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="box" data-item="...">
-                    <div class="image">
-                        <img src="/assets/lego5.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>LAMBORGHINI SIAN</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="box" data-item="...">
-                    <div class="image">
-                        <img src="/assets/lego.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>CARRO GT PRELIMINAR</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="box" data-item="...">
-                    <div class="image">
-                        <img src="/assets/lego3.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>GRUA SOBRE ORUGAS COMPACTA</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-</section>
-<!-- Destacados section ends -->
 
 <!-- contact section starts  -->
 <section class="contact" id="contact">
@@ -166,23 +104,9 @@
             <h3>Teléfono</h3>
             <p>+57 3226520045</p>
         </div>
-        <div class="row">
-            <form action="">
-                <h3>No seas Tímido, si tienes dudas contáctanos.</h3>
-                <div class="inputBox">
-                    <input type="text" placeholder="Tu Nombre">
-                    <input type="email" placeholder="Tu Email">
-                </div>
-                <div class="inputBox">
-                    <input type="number" placeholder="Tu Numero">
-                </div>
-                <textarea placeholder="Tu Mensaje" cols="30" rows="10"></textarea>
-                <input type="submit" value="Enviar Mensaje" class="btn">
-            </form>
-        </div>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31812.192138972136!2d-74.08827024888386!3d4.678584966934309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a9670582fe9%3A0x2d81bfa8bd301b45!2sTorre%20Empresarial%20FD-100!5e0!3m2!1ses-419!2sco!4v1658456452594!5m2!1ses-419!2sco"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            width="600" height="450" style="margin-left: 75%;" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </section>
@@ -199,7 +123,6 @@
             <h3>Enlaces Rápidos</h3>
             <a href="/tienda/#home"> <i class="fas fa-arrow-right"></i> Home </a>
             <a href="/tienda/#products"> <i class="fas fa-arrow-right"></i> Productos </a>
-            <a href="/tienda/#featured"> <i class="fas fa-arrow-right"></i> Destacados </a>
             <a href="/tienda/#contact"> <i class="fas fa-arrow-right"></i> Contacto </a>
             <a routerLink="/terminos" target="_blank"> <i class="fas fa-arrow-right"></i> Términos y Condiciones </a>
             <a routerLink="/condiciones" target="_blank"> <i class="fas fa-arrow-right"></i> Politica de Privacidad </a>
@@ -216,3 +139,5 @@
     <div class="credit">Copyright © 2022 <span>Azumi.io </span> | All Rights Reserved.</div>
 </section>
 <!-- footer section end  -->
+
+

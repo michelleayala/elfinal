@@ -27,17 +27,17 @@
 						<i class="zmdi zmdi-font"></i>
 					</span>
 					<div class="wrap-input validate-input">
-						<input class="input" type="text" name="User" placeholder="Usuario">
+						<input class="input" type="text" name="User" id="user" placeholder="Usuario" [(ngModel)]="usuario">
 						<span class="focus-input"></span>
 					</div>
 					<div class="wrap-input validate-input">
-						<input class="input" type="password" name="pass" placeholder="Contraseña">
+						<input class="input" type="password" name="pass" id="pass" placeholder="Contraseña" [(ngModel)]="password">
 						<span class="focus-input" ></span>
 					</div>
 					<div class="container-login-form-btn">
 						<div class="wrap-login-form-btn">
 							<div class="login-form-bgbtn"></div>
-							<button class="login-form-btn" routerLink="/panel">
+							<button class="login-form-btn" (click)="Iniciar()">
 								Login
 							</button>
 						</div>
