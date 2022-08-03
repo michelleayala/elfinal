@@ -22,16 +22,17 @@
               <th>Descuento</th>
               <th>Cantidad</th>
               <th>Subtotal</th>
+              <th>Eliminar</th>
             </tr>
           </thead>
   
           <tbody>
-            <td></td>
-            <td>BMW M 1000 RR</td>
-            <td>1.499.900</td>
-            <td>49.900</td>
-            <input type="text" style="margin-top: 15px; width: 7rem; background-color: rgb(201, 195, 195); color: white; text-align: center;">
-            <td>1.449.000</td>
+            <td><img src="/assets/BNW.jpg" alt="" style="width: 60px;height: 50px;"></td>
+            <td >BMW M 1000 RR</td>
+            <td>$1.499.900</td>
+            <td>$49.900</td>
+            <input type="number" style="margin-top: 15px; width: 7rem; background-color: rgb(201, 195, 195); color: white; text-align: center;">
+            <td>$1.449.000</td>
             <td><button type="button" class="btn btn-danger"><i class="fas fa-trash" style="padding: 10px;background-color: red;border-radius: 10%;"></i></button></td>
           </tbody>
 
@@ -44,8 +45,8 @@
   <div class="col-lg-3">
     <h5 class="section-title position-relative text-uppercase mb-3"><span>Datos de Envio</span></h5>
     <div class="bg-light p-30 mb-5">
-      <div class="border-bottom pb-2">
-        <div class="d-flex justify-content-between mb-3" style="background-color: whitesmoke;">
+      <div class="border-bottom pb-2" style="background-color: whitesmoke;">
+        <div class="d-flex justify-content-between mb-3">
           <h6>Nombre:</h6>
           <input id="nombre" type="text" style="background-color: rgb(201, 195, 195);">
         </div>
@@ -60,40 +61,36 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-3" style="margin-left: 58.5rem;">
+  <div class="col-lg-3" style="margin-left: 58.5rem;margin-top: 0;">
     <h5 class="section-title position-relative text-uppercase mb-3"><span>Resumen de la compra</span></h5>
     <div class="bg-light p-30 mb-5">
-      <div class="border-bottom pb-2">
+      <div class="border-bottom pb-2" style="background-color: whitesmoke;">
         <div class="d-flex justify-content-between mb-3" style="background-color: whitesmoke;">
           <h6>Subtotal</h6>
-          <h6>$15.000</h6>
+          <h6>$1.499.900</h6>
         </div>
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between" style="background-color: whitesmoke;">
           <h6 class="font-weight-medium">Descuentos</h6>
-          <h6 class="font-weight-medium">$2.000</h6>
+          <h6 class="font-weight-medium">$49.900</h6>
         </div>
       </div>
-      <div class="pt-2">
+      <div class="pt-2" style="background-color: whitesmoke;">
         <div class="d-flex justify-content-between mt-2">
           <h5>Total</h5>
-          <h5>$13.000</h5>
+          <h5>$1.449.000</h5>
         </div>
-        <a class="btn btn-block btn-primary font-weight-bold my-3 py-3" href="https://api.whatsapp.com/send?phone=+573226520045&text=nombre%0D%0Adireccion%0D%0Atelefono%0D%0Ahttp://localhost:4200/carro">Proceder con la compra</a>
+        <a class="btn btn-block btn-primary font-weight-bold my-3 py-3" href="https://api.whatsapp.com/send?phone=+573226520045&text=Estoy interesado en este producto, BMW M 1000 RR, de precio 1.499.000">Proceder con la compra</a>
       </div>
     </div>
   </div>
 
 </div>
-
-
-<div class="col-12 text-center">
+<div class="col-12 text-center" style="background-color: whitesmoke;">
   <div class="salida">
-    <a routerLink="/tienda" style="text-decoration: none; font-weight: 700;font-size: 2rem; color: grey;">Volver a la
+    <a routerLink="/tienda">Volver a la
       tienda</a>
   </div>
 </div>
-
-
 <!-- Cart End -->
 
 <!-- footer section starts  -->

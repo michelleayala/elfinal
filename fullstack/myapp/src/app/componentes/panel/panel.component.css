@@ -4,7 +4,6 @@
     margin-left: 5rem;
     z-index: 0;
     position: relative;
-    background: #f4f7f4;
     padding-top: 1.5rem;
     bottom: 0;
 
@@ -28,7 +27,8 @@ p {
     padding: 0;
 }
 .page-wrapper {
-    min-height: 100vh;
+    padding-top: 70px;
+    padding-bottom: 50px;
 }
 h2,
 h5{

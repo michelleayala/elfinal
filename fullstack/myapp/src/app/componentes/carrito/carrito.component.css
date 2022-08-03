@@ -11,7 +11,6 @@
   -webkit-transition: .2s linear;
   transition: .2s linear;
 }
-
 .header .icons div,
 .header .icons a,
 .header .search-form label,
@@ -22,7 +21,6 @@
   cursor: pointer;
   -webkit-text-stroke: 0.1rem black;
 }
-
 .header .icons div:hover,
 .header .icons a:hover,
 .header .search-form label:hover,
@@ -31,14 +29,12 @@
 .contact .icons-container .icons i:hover {
   -webkit-text-stroke: 0.1rem #dd2476;
 }
-
 html {
   font-size: 50%;
   scroll-behavior: smooth;
   scroll-padding-top: 7rem;
   overflow-x: hidden;
 }
-
 /* Header */
 .header {
   position: fixed;
@@ -52,29 +48,25 @@ html {
   padding: 2rem 9%;
   background: #fff;
 }
-
 .header .logo {
   font-size: 1.5rem;
   color: #2e2c2caf;
   font-weight: bolder;
 }
-
 .header .logo i {
   color: #dd2476;
 }
-
 .header .icons div,
 .header .icons a {
   font-size: 1.5rem;
   margin-left: 2rem;
 }
-
 #menu-btn {
   display: none;
 }
 .row {
   background-color: whitesmoke; 
-  padding: 2rem;
+  padding: .5rem;
 }
 .row table{
   margin-top: 6rem; margin-left: 1rem;
@@ -87,7 +79,6 @@ html {
   padding: 5px;
   text-align: center;
 }
-
 .pt-2 a{
   background-color: salmon;
 }
@@ -97,22 +88,29 @@ html {
 .salida:hover{
   color:rgb(62, 203, 177);
 }
-
 /* footer */
 .footer {
   background: #fff;
 }
-
 .footer .credit {
-  margin-top: 2.5rem;
+  margin-top: 0rem;
   padding: 1rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
   border-top: 0.1rem solid rgba(0, 0, 0, 0.3);
   text-align: center;
   color: #666;
   font-size: 1.5rem;
 }
-
 .footer .credit span {
   color: #dd2476;
+}
+.salida a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 2rem;
+  color: grey;
+  padding-bottom: 0;
+}
+.salida a:hover {
+  color: red;
 }
